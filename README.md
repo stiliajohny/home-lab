@@ -16,15 +16,15 @@
   <h3 align="center">Home Lab</h3>
 
   <p align="center">
-    This is a collection of code, readme and notes on my homelab setup. You wont find anything sensitive in here ;) <br>
+    This is a collection of code, readme and notes of my homelab setup. You wont find anything sensitive in here ;) <br>
     All IPs, IDs, Hostnames, Cluster names etc have been changed and all images have been taken form an example. <br>
     Using this code is for educational reasons and/or to help you start
     <br />
     <a href="./README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/stiliajohny/Repo-Template">View Demo</a>
-    ·
+<!--    <a href="https://github.com/stiliajohny/Repo-Template">View Demo</a>
+    · -->
     <a href="https://github.com/stiliajohny/Repo-Template/issues/new?labels=i%3A+bug&template=1-bug-report.md">Report Bug</a>
     ·
     <a href="https://github.com/stiliajohny/Repo-Template/issues/new?labels=i%3A+enhancement&template=2-feature-request.md">Request Feature</a>
@@ -83,7 +83,7 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 ## Getting Started
 
 Get a local copy of the repo.
-Ensure the Prerequisites are installed before starting 
+Ensure the Prerequisites are installed before starting.
 
 ### Prerequisites
 
@@ -97,7 +97,7 @@ Ensure the Prerequisites are installed before starting
 
 ### Installation
 
-Install the software. At the time of this repo creation the following versions are the latests and working fine
+At the time of this repo creation the following versions are the latests and working fine
 
 - Proxmox 6.3
 - Ansible 2.9.0
