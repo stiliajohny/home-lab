@@ -13,16 +13,18 @@
     <img src=".assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">[Project Name]</h3>
+  <h3 align="center">Home Lab</h3>
 
   <p align="center">
-    [Project short description]
+    This is a collection of code, readme and notes of my homelab setup. You wont find anything sensitive in here ;) <br>
+    All IPs, IDs, Hostnames, Cluster names etc have been changed and all images have been taken form an example. <br>
+    Using this code is for educational reasons and/or to help you start
     <br />
     <a href="./README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/stiliajohny/Repo-Template">View Demo</a>
-    ·
+<!--    <a href="https://github.com/stiliajohny/Repo-Template">View Demo</a>
+    · -->
     <a href="https://github.com/stiliajohny/Repo-Template/issues/new?labels=i%3A+bug&template=1-bug-report.md">Report Bug</a>
     ·
     <a href="https://github.com/stiliajohny/Repo-Template/issues/new?labels=i%3A+enhancement&template=2-feature-request.md">Request Feature</a>
@@ -33,7 +35,8 @@
 
 ## Table of Contents
 
-- [About the Project](#about-the-project)
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -49,7 +52,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](./.assets/screenshot.png)
+![Home Lab](.assets/proxmox_sum.png)
 
 <!--
 There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
@@ -67,73 +70,55 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 
 ### Built With
 
-<!--
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-- [Bootstrap](https://getbootstrap.com)
-- [JQuery](https://jquery.com)
-- [Laravel](https://laravel.com)
--->
+- Proxmox
+- Ansible
+- Packer
+- CloudInit
+- Terraform
+- Terraform Proxmox Provider
+- Golang
 
 ---
-
-<!-- GETTING STARTED -->
 
 ## Getting Started
 
-<!--
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
--->
+Get a local copy of the repo.
+Ensure the Prerequisites are installed before starting.
 
 ### Prerequisites
 
-<!--
-
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-
-```sh
-npm install npm@latest -g
-```
--->
+- Proxmox [Installation steps](https://www.proxmox.com/en/proxmox-ve/get-started)
+- Ansible [Installation steps](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+- Packer [Installation steps](https://learn.hashicorp.com/tutorials/packer/getting-started-install)
+- CloudInit [Installation steps](https://docs.rightscale.com/rl10/reference/10.6.0/rl10_cloud_init_installation.html)
+- Terraform [Installation steps](https://www.terraform.io/downloads.html)
+- Terraform Proxmox Provider [Installation steps](https://github.com/Telmate/terraform-provider-proxmox)
+- Golang [Installation steps](https://golang.org/doc/install)
 
 ### Installation
 
-<!--
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+At the time of this repo creation the following versions are the latests and working fine
 
-```sh
-git clone https://github.com/your_username_/Project-Name.git
-```
+- Proxmox 6.3
+- Ansible 2.9.0
+- Packer >1.6.6
+- CloudInit 20.4.1
+- Terraform 0.14.0
+- Terraform Proxmox provider 2.6.7
+- Golang 1.15.8
 
-3. Install NPM packages
-
-```sh
-npm install
-```
-
-4. Enter your API in `config.js`
-
-```JS
-const API_KEY = 'ENTER YOUR API';
-```
--->
-
----
-
-<!-- USAGE EXAMPLES -->
 
 ## Usage
 
-<!--
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
--->
-
+1. Install Proxmox
+   - Ensure the IP you will be using is available and accessible,
+   - Use a strong password for your root user ( length>16 including numbers, uppercase and symbols )
+1. Copy your ssh public key on the proxmox server for easier and more secure  ssh access
+  - `$ ssh-copy-id root@192.168.1.22`
+2. Run Ansible against the IP you used for the proxmox server
+  - `$ ansible all -i 192.168.1.22, -m include_role -a name=proxmox -u root`<br>
+    For more info on what this installs look into the ansible folder  [here](/ansible)
+    
 ---
 
 <!-- ROADMAP -->
@@ -168,7 +153,7 @@ Distributed under the GPL-3.0 License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@john_stilia](https://twitter.com/john_stilia) - stilia.johny@gmail.com
+John Stilia - [@john_stilia](https://twitter.com/john_stilia) - [stilia.johny@gmail.com](mailto:stilia.johny@gmail.com)
 
 <!--
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
@@ -180,6 +165,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 ## Acknowledgements
 
+- [kevinalmansa](https://github.com/kevinalmansa/)  :metal:
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 - [Img Shields](https://shields.io)
 - [Choose an Open Source License](https://choosealicense.com)
