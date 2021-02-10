@@ -118,6 +118,7 @@ At the time of this repo creation the following versions are the latests and wor
 2. Run Ansible against the IP you used for the proxmox server
   - `$ ansible all -i 192.168.1.22, -m include_role -a name=proxmox -u root`<br>
     For more info on what this installs look into the ansible folder  [here](/ansible)
+    
 ---
 
 <!-- ROADMAP -->
@@ -152,7 +153,7 @@ Distributed under the GPL-3.0 License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@john_stilia](https://twitter.com/john_stilia) - stilia.johny@gmail.com
+John Stilia - [@john_stilia](https://twitter.com/john_stilia) - [stilia.johny@gmail.com](mailto:stilia.johny@gmail.com)
 
 <!--
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
@@ -164,6 +165,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 ## Acknowledgements
 
+- [kevinalmansa](https://github.com/kevinalmansa/)  :metal:
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 - [Img Shields](https://shields.io)
 - [Choose an Open Source License](https://choosealicense.com)
