@@ -35,7 +35,6 @@ Example Playbook
   gather_facts: yes
   become: true
   roles:
-#    - server_banners_prompts
     - influxdb
 ```
 
