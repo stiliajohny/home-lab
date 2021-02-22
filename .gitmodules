@@ -1,0 +1,3 @@
+[submodule "ansible/roles/server_banners_prompts"]
+	path = ansible/roles/server_banners_prompts
+	url = git@github.com:stiliajohny/server_banners_prompts.git

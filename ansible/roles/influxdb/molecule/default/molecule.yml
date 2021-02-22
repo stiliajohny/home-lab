@@ -1,0 +1,28 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: vagrant
+  provider:
+    name: virtualbox
+platforms:
+  - name: vagrant-ubuntu
+    box: ubuntu/bionic64
+    memory: 512
+    cpus: 1
+    provider_raw_config_args:
+      - customize ["modifyvm", :id, "--name", "molecule-ubuntu-bionic"]
+  - name: vagrant-centos
+    box: centos/7
+    memory: 512
+    cpus: 1
+    provider_raw_config_args:
+      - customize ["modifyvm", :id, "--name", "molecule-centos-7"]
+provisioner:
+  name: ansible
+verifier:
+  name: ansible
+lint: |
+        yamllint .
+        ansible-lint --force-color -x 204,403,301,305,701,401,303,208,306 .
+        flake8
