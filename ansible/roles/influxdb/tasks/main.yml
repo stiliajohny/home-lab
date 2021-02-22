@@ -1,0 +1,91 @@
+---
+# tasks file for influxdb
+- name: Run install tasks
+  include_vars: "{{ loop_influx_os }}"
+  with_first_found:
+    - "{{ ansible_distribution_release | lower }}.yml"
+    - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version | lower }}.yml"
+    - "{{ ansible_distribution | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
+    - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
+    - "{{ ansible_distribution | lower }}.yml"
+    - "{{ ansible_os_family | lower }}.yml"
+  loop_control:
+    loop_var: loop_influx_os
+
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    update_cache: yes
+
+- name: Only run "update_cache=yes" if the last one is more than 3600 seconds ago
+  apt:
+    update_cache: yes
+
+- name: Update all packages to the latest version
+  apt:
+    upgrade: dist
+
+- name: Install influxdb packages
+  apt:
+    name:
+      - gnupg
+      - curl
+    state: present
+
+- name: Import Influx repo apt key
+  apt_key:
+    url: "https://repos.influxdata.com/influxdb.key"
+    state: present
+
+- name: Add Influx Repo
+  apt_repository:
+    repo: "deb https://repos.influxdata.com/ubuntu {{ ubuntu_codename }} stable"
+    validate_certs: false
+    filename: influx_repo
+    state: present
+
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    update_cache: yes
+
+- name: Only run "update_cache=yes" if the last one is more than 3600 seconds ago
+  apt:
+    update_cache: yes
+
+- name: Update all packages to the latest version
+  apt:
+    upgrade: dist
+
+- name: Install influxdb packages
+  apt:
+    name:
+      - influxdb
+    state: present
+
+- name: Update influxdb config
+  template:
+    src: influxdb.conf.j2
+    dest: /etc/influxdb/influxdb.conf
+    owner: root
+    group: root
+    backup: true
+    mode: 0644
+
+- name: Start and enable influxdb service
+  systemd:
+    state: restarted
+    enabled: true
+    daemon_reload: yes
+    name: influxdb
+
+- name: Import Grafana dashboard foo
+  delegate_to: 127.0.0.1
+  run_once: true
+  grafana_dashboard:
+    grafana_url: "{{ grafana_endpoint }}"
+    url_username: "{{ grafana_user }}"
+    url_password: "{{ grafana_password }}"
+    state: present
+    message: Updated by ansible
+    overwrite: yes
+    path: "{{ role_path }}/files/proxmox_dashboard.json"
+  when: provision_grafana_dashboard is true
