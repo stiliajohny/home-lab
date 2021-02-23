@@ -77,8 +77,9 @@
     daemon_reload: yes
     name: influxdb
 
-- name: Import Grafana dashboard foo
-  delegate_to: 127.0.0.1
+
+- name: Import Grafana dashboard Proxmox
+  delegate_to: 127.0.0.1 #forces the task to be executed from the same host as the ansible is executed yet having the facts of the targeted host
   run_once: true
   grafana_dashboard:
     grafana_url: "{{ grafana_endpoint }}"
@@ -89,3 +90,17 @@
     overwrite: yes
     path: "{{ role_path }}/files/proxmox_dashboard.json"
   when: provision_grafana_dashboard is true
+
+
+- name: Create influxdb datasource for Proxmox
+  delegate_to: 127.0.0.1 #forces the task to be executed from the same host as the ansible is executed yet having the facts of the targeted host
+  run_once: true
+  grafana_datasource:
+    name: "Proxmox_Metrics"
+    grafana_url: "{{ grafana_endpoint }}"
+    grafana_user: "{{ grafana_user }}"
+    grafana_password: "{{ grafana_password }}"
+    ds_type: "influxdb"
+    url: "http://{{ ansible_all_ipv4_addresses[0] }}:8086"
+    database: "{{ influxdb_database }}"
+    state: present
