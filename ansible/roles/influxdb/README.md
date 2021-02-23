@@ -1,22 +1,21 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This role is going to install and configure InfluxDB on a host, it will also configure this influx as a datastore on Grafana and upload a dashboard too
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+After the role run successfully, go to Proxmox and add a metrics server which IP is the host just provisioned with InfluxDB
 
 Role Variables
 --------------
 
 Change the defaults on the ./defaults/main.yml
 |                             |                           |
-| :--------------------------- | :------------------------- |
-| http_bind_ip_port           | 0.0.0.0:8888              |
-| udp_bind_ip_port            | 0.0.0.0:8089              |
-| database                    | proxmox                   |
+| :-------------------------- | :------------------------ |
+| influxdb_udp_bind_ip_port   | 0.0.0.0:8089              |
+| influxdb_database           | proxmox                   |
 | provision_grafana_dashboard | true                      |
 | grafana_endpoint            | http://192.168.1.113:3000 |
 | grafana_user                | admin                     |
@@ -35,7 +34,6 @@ Example Playbook
   gather_facts: yes
   become: true
   roles:
-#    - server_banners_prompts
     - influxdb
 ```
 

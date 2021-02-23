@@ -42,7 +42,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -149,7 +149,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -256,7 +256,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -363,7 +363,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "decimals": 2,
       "description": "",
       "fieldConfig": {
@@ -489,7 +489,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "decimals": 2,
       "description": "",
       "fieldConfig": {
@@ -615,7 +615,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "decimals": 2,
       "description": "",
       "fieldConfig": {
@@ -741,7 +741,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "decimals": 2,
       "description": "",
       "fieldConfig": {
@@ -869,7 +869,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -989,7 +989,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -1108,7 +1108,7 @@
         "endCountdownTime": "2019-04-12T19:20:00.000Z",
         "endText": "00:00:00"
       },
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "dateSettings": {
         "dateFormat": "YYYY-MM-DD",
         "fontSize": "20px",
@@ -1217,7 +1217,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "decimals": 1,
       "fieldConfig": {
         "defaults": {
@@ -1329,7 +1329,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -1449,7 +1449,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -1569,7 +1569,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -1686,7 +1686,7 @@
     },
     {
       "columns": [],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -1829,7 +1829,7 @@
     },
     {
       "columns": [],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -1976,7 +1976,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "test",
+          "datasource": "Proxmox_Metrics",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -2216,7 +2216,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "test",
+          "datasource": "Proxmox_Metrics",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -2354,7 +2354,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "test",
+          "datasource": "Proxmox_Metrics",
           "decimals": 2,
           "fieldConfig": {
             "defaults": {
@@ -2507,7 +2507,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "test",
+          "datasource": "Proxmox_Metrics",
           "decimals": 2,
           "fieldConfig": {
             "defaults": {
@@ -2660,7 +2660,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "test",
+          "datasource": "Proxmox_Metrics",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -2804,7 +2804,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "test",
+          "datasource": "Proxmox_Metrics",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -2963,7 +2963,7 @@
     },
     {
       "columns": [],
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -3322,7 +3322,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -3478,7 +3478,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -3634,7 +3634,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -3788,7 +3788,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -3956,7 +3956,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -4164,7 +4164,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -4364,7 +4364,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -4564,7 +4564,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -4719,7 +4719,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -4874,7 +4874,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -5029,7 +5029,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "test",
+      "datasource": "Proxmox_Metrics",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -5209,7 +5209,7 @@
             "flyinghermes"
           ]
         },
-        "datasource": "test",
+        "datasource": "Proxmox_Metrics",
         "definition": "SHOW TAG VALUES FROM system WITH KEY=host WHERE object='nodes'",
         "hide": 0,
         "includeAll": false,
