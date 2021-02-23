@@ -1,12 +1,12 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This role is going to install and configure InfluxDB on a host, it will also configure this influx as a datastore on Grafana and upload a dashboard too
 
 Requirements
 ------------
 
-N/A
+After the role run successfully, go to Proxmox and add a metrics server which IP is the host just provisioned with InfluxDB
 
 Role Variables
 --------------
