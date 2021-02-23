@@ -492,8 +492,8 @@ reporting-enabled = false
 [[udp]]
 
    enabled = true
-   bind-address = "{{ udp_bind_ip_port }}"
-   database = "{{ database }}"
+   bind-address = "{{ influxdb_udp_bind_ip_port }}"
+   database = "{{ influxdb_database }}"
    batch-size = 1000
    batch-timeout = "1s"
 
