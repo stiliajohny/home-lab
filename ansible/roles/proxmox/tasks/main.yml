@@ -28,7 +28,7 @@
     upgrade: dist
   become: true
 
-- name: Install the package "foo"
+- name: Install base packages
   apt:
     name: "{{ proxmoxloop }}"
     state: present
@@ -62,3 +62,4 @@
 - name: Force-reinstall proxmox-widget-toolkit
   shell: apt-get --reinstall install proxmox-widget-toolkit
   become: true
+
