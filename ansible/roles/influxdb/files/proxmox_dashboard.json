@@ -1886,7 +1886,7 @@
           "pattern": "uptime",
           "thresholds": [],
           "type": "number",
-          "unit": "dthms"
+          "unit": "dtdurations"
         },
         {
           "alias": "LXC",
@@ -3060,17 +3060,21 @@
         {
           "alias": "CPU %",
           "align": "auto",
-          "colorMode": null,
+          "colorMode": "value",
           "colors": [
-            "rgba(245, 54, 54, 0.9)",
+            "rgba(50, 172, 45, 0.97)",
             "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
+            "rgba(245, 54, 54, 0.9)"
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
           "mappingType": 1,
           "pattern": "cpu",
-          "thresholds": [],
+          "thresholds": [
+            "50",
+            "60",
+            "80"
+          ],
           "type": "number",
           "unit": "percentunit"
         },
@@ -4394,7 +4398,7 @@
       "lines": true,
       "linewidth": 1,
       "links": [],
-      "nullPointMode": "null",
+      "nullPointMode": "connected",
       "options": {
         "dataLinks": []
       },
@@ -5194,7 +5198,7 @@
       "type": "row"
     }
   ],
-  "refresh": "15m",
+  "refresh": "5s",
   "schemaVersion": 25,
   "style": "dark",
   "tags": [],
@@ -5231,7 +5235,7 @@
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-2d",
     "to": "now"
   },
   "timepicker": {
